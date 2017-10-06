@@ -1,0 +1,13 @@
+{{define "title"}}Logged {{.Login}}{{end}}
+{{define "content"}}
+<p>Hi! {{.Login}}, you are logged. </p> <a href="/logout">Logout</a><br>
+Functions:<br>
+<table>
+    <tr>
+        <td><a href="/fast">Query SQL</a></td>
+        <td><a href="/fact">Factorize a Number</a></td>
+        <td><a href="/slow">Reverse Ping</a></td>
+    </tr>
+</table>
+
+{{end}}

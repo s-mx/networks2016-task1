@@ -1,0 +1,7 @@
+{
+  "userDb": "task1_user",
+  "password": "task1task1task1",
+  "host": "localhost",
+  "nameDb": "app_users",
+  "salt": "SCc0wgQK"
+}

@@ -1,0 +1,32 @@
+{{define "title"}}Factorization{{end}}
+
+{{define "content"}}
+
+<script type="text/javascript">
+    function callback(result) {
+        alert(result);
+    }
+
+    function factorize() {
+        var numberField = document.getElementById("number");
+        var ajaxData = {
+            type: "get",
+            url: "/api/fact/" + numberField.value,
+            async: false,
+            success: callback
+        };
+
+        $.ajax(ajaxData);
+    }
+
+</script>
+
+<p>User {{.Login}}</p><br><br>
+<form onsubmit="factorize()">
+    Number:
+    <input id="number" type="text" name="number">
+    <input type="submit" value="Factorize">
+</form>
+
+<p id="result"></p>
+{{end}}
